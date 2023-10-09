@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap");
 body {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Be Vietnam Pro", sans-serif;
+  background-color: black;
 }
 .kunteynir {
   max-width: 1200px;
@@ -11,8 +9,9 @@ body {
   padding: 0 10px;
 }
 * {
-  background-color: black;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 ul li {
   list-style: none;
@@ -21,11 +20,12 @@ ul li {
 a {
   text-decoration: none;
   transition: 0.4s;
-  color: inherit;
+  color: white;
 }
 img {
   max-width: 100%;
   max-height: 100%;
+  background: none;
 }
 button {
   display: block;
@@ -33,7 +33,15 @@ button {
   background-color: transparent;
   font: inherit;
   cursor: pointer;
+  background: none;
+
   transition: 0.4s;
+}
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* HEADER */
@@ -200,6 +208,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  margin-bottom: 120px;
 }
 .rent__items--item {
   position: relative;
@@ -247,4 +256,211 @@ button {
   height: 32px;
   background: url(/img/strela.png) 50% / cover no-repeat;
   transform: translateY(-50%);
+}
+
+/* SERVICES */
+
+.services__title {
+  margin-bottom: 66px;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 64px;
+  letter-spacing: 0.6%;
+}
+.services__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 120px;
+  gap: 24px;
+}
+.services__items--item {
+  width: 384px;
+}
+.services__items--item---img {
+  margin-bottom: 24px;
+}
+.services__items--item---title {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.6%;
+}
+.services__items--item---desc {
+  opacity: 80%;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.6%;
+}
+
+/* DESTINATION */
+
+.destination__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 162px;
+}
+.destination__items--item {
+  position: relative;
+  width: 384px;
+  background-color: #171717;
+  border: 1px solid #171717;
+}
+.destination__items--item---info {
+  padding: 24px;
+  background-color: #171717;
+}
+.destination__items--item---info-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.6%;
+  background: none;
+}
+
+.destination__items--item---info-desc {
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.41%;
+  opacity: 80%;
+  background: none;
+}
+
+.destination__items--item---info-price {
+  margin-bottom: 17px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.41%;
+  padding-left: 42px;
+  background: none;
+  position: relative;
+  display: block;
+}
+.destination__items--item---info-price::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: url(/img/Front\ Car.png) no-repeat;
+  transform: translateY(-50%);
+}
+.destination__items--item---info-link {
+  margin-bottom: 17px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.41%;
+  color: #ee8313;
+  background: none;
+}
+.destination__items--item---info-link:hover {
+  color: #b86207;
+}
+
+/* LOCATION */
+
+#location {
+  margin-bottom: 102px;
+}
+
+/* FOOTER */
+#footer {
+  background: #1f1905;
+  padding-top: 40px;
+}
+.footer__copyright {
+  background-color: #ee8313;
+}
+.footer__copyright--text {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__nav--item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 80%;
+  padding-bottom: 28px;
+}
+footer__nav--item---link {
+  color: white;
+  opacity: 80%;
+}
+.footer__nav--item---link:hover {
+  color: #ee8313;
+}
+.footer__contacts--image {
+  display: block;
+  width: 120px;
+  height: 34px;
+  margin-bottom: 34px;
+  margin-left: 51px;
+  background: url(img/social_1.svg) 50% / cover no-repeat;
+}
+.footer__contacts--image:nth-child(2) {
+  background-image: url(img/social_2.svg);
+}
+.footer__contacts--image:nth-child(3) {
+  background-image: url(img/social_3.svg);
+  margin-bottom: 0;
+}
+.footer__contacts--image:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.footer__nav--title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+.footer__logohk {
+  width: 48px;
+  height: 48px;
+}
+.footer__logo {
+  margin-bottom: 64px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.footer__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer__about--desc {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  padding-bottom: 98px;
+  max-width: 235px;
+}
+.footer__nav--items {
+  padding-bottom: 40px;
+}
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  margin: 40px 100px 0 auto;
 }
